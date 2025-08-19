@@ -1,19 +1,12 @@
 //JavaScript File app.js
 
-// Call stack Visulization
+// JS is a single threaded
 
-function one() {
-    return 1;
-} 
+let a = 25;
+console.log(a);
 
-function two() {
-    return one() + one();
-}
+let b = 10;
+console.log(b);
 
-function three() {
-    let ans = two() + one();
-    console.log(ans);
-}
-
-three();
+console.log(a+b);
 
