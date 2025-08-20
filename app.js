@@ -1,12 +1,11 @@
 //JavaScript File app.js
 
-// JS is a single threaded
+// JS is a single threaded language.
 
-let a = 25;
-console.log(a);
+setTimeout(() =>{
+    console.log("apna college");
+}, 2000);
 
-let b = 10;
-console.log(b);
+console.log("hello....");
 
-console.log(a+b);
 
