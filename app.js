@@ -1,25 +1,19 @@
 //JavaScript File app.js
 
-// JS is a single threaded language.
+// Callback Hell
 
-// let a = 25;
-// console.log(a);
+h1 = document.querySelector("h1");
 
-// let b = 10;
-// console.log(b);
 
-// console.log(a+b);
+setTimeout(() => {
+    h1.style.color = "red";
+}, 1000);
 
-//Synchronous Nature => Code executes line by line
-//ASynchronous Nature => Code executes not in lin by line.
-
-setTimeout(() =>{
-    console.log("apna college");
+setTimeout(() => {
+    h1.style.color = "orange";
 }, 2000);
 
-setTimeout(() =>{
-    console.log("Hello World!");
-}, 2000);
-
-console.log("hello....");
+setTimeout(() => {
+    h1.style.color = "green";
+}, 3000);
 
