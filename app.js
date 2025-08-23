@@ -21,5 +21,3 @@ changeColor("red", 1000, () =>  {
     });
 });
 
-
-// callbacks nesting => callback hell
