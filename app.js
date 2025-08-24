@@ -1,26 +1,36 @@
 //JavaScript File app.js
 
-// Callback Hell
+// Promises
 
-h1 = document.querySelector("h1");
+function savetoDb(data, success, failure) {
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
 
-function changeColor(color, delay, nextColorChange) {
-    setTimeout(() => {
-        h1.style.color = color;
-        if (nextColorChange) nextColorChange();
-    }, delay);
+    if (internetSpeed > 4) {
+        success();
+    }
+    else {
+        failure();
+    }
+    
 }
 
-changeColor("red", 1000, () =>  {
-    changeColor("orange", 1000, () => {
-        changeColor("green", 1000, () => {
-            changeColor("yellow", 1000, () => {
-                changeColor("blue", 1000);
-            });
+// callback Hell
+savetoDb(
+    "apnaCollege", () => {
+    console.log("Success: your data was saved.");
+    savetoDb(
+        "hello world", () => {
+        console.log("success2: data2 saved.");
+        savetoDb(
+            "Anuj", () => {
+            console.log("success3: data3 saved.");
+        }, () => {
+            console.log("failure3: weak connection.");
         });
+    }, () => {
+        console.log("failure2: data2 not saved.");
     });
+}, ()=> {
+    console.log("Failure: weak connection, data not saved.");
 });
-
-
-// callbacks nesting => callback hell
 
